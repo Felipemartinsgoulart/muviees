@@ -90,7 +90,7 @@ class _MoviePageState extends State<MoviePage> {
     return AppBar(
       leading: IconButton(
         icon: Icon(
-          Icons.refresh,
+          Icons.search,
         ),
         onPressed: _initialize,
       ),
@@ -142,6 +142,11 @@ class _MoviePageState extends State<MoviePage> {
       onTap: () => _openDetailPage(movie.id),
     );
   }
+
+  // Widget _buildGenreCard(context, index) {
+  //   final genre = _controller.genre[index];
+  //   return genres;
+  // }
 
   _openDetailPage(movieId) {
     Navigator.push(

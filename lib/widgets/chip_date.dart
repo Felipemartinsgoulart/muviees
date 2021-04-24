@@ -29,7 +29,7 @@ class ChipDate extends StatelessWidget {
         ),
       ),
       label: Text(
-        DateFormat(dateFormat).format(date),
+        "Data de lançamento " + DateFormat(dateFormat).format(date),
         textAlign: TextAlign.end,
         style: TextStyle(
           fontSize: 18,
