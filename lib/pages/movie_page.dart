@@ -12,6 +12,28 @@ random(min, max) {
   return min + rn.nextInt(max - min);
 }
 
+class Constants {
+  static const String FirstItem = 'First Item';
+  static const String SecondItem = 'Second Item';
+  static const String ThirdItem = 'Third Item';
+
+  static const List<String> choices = <String>[
+    FirstItem,
+    SecondItem,
+    ThirdItem,
+  ];
+}
+
+void choiceAction(String choice) {
+  if (choice == Constants.FirstItem) {
+    print('I First Item');
+  } else if (choice == Constants.SecondItem) {
+    print('I Second Item');
+  } else if (choice == Constants.ThirdItem) {
+    print('I Third Item');
+  }
+}
+
 class MoviePage extends StatefulWidget {
   @override
   _MoviePageState createState() => _MoviePageState();
@@ -21,7 +43,7 @@ class _MoviePageState extends State<MoviePage> {
   final _controller = MovieController();
   final _scrollController = ScrollController();
 
-  int lastPage = random(1, 6);
+  int lastPage = random(1, 4);
 
   @override
   void initState() {
@@ -47,6 +69,7 @@ class _MoviePageState extends State<MoviePage> {
     setState(() {
       _controller.loading = true;
     });
+    lastPage++;
 
     await _controller.fetchAllMovies(page: lastPage);
 
@@ -65,12 +88,26 @@ class _MoviePageState extends State<MoviePage> {
 
   _buildAppBar() {
     return AppBar(
-      title: Text(kAppName),
-      actions: [
-        IconButton(
-          icon: Icon(Icons.refresh),
-          onPressed: _initialize,
+      leading: IconButton(
+        icon: Icon(
+          Icons.refresh,
         ),
+        onPressed: _initialize,
+      ),
+      centerTitle: true,
+      title: Text("Muviees"),
+      actions: <Widget>[
+        PopupMenuButton<String>(
+          onSelected: choiceAction,
+          itemBuilder: (BuildContext context) {
+            return Constants.choices.map((String choice) {
+              return PopupMenuItem<String>(
+                value: choice,
+                child: Text(choice),
+              );
+            }).toList();
+          },
+        )
       ],
     );
   }
