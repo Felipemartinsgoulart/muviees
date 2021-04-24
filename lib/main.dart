@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'core/constants.dart';
 import 'core/theme_app.dart';
 import 'pages/movie_page.dart';
 

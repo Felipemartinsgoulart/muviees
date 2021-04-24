@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/constants.dart';
 import 'movie_detail_page.dart';
 import '../widgets/centered_message.dart';
 import '../widgets/centered_progress.dart';
@@ -13,9 +12,9 @@ random(min, max) {
 }
 
 class Constants {
-  static const String FirstItem = 'First Item';
-  static const String SecondItem = 'Second Item';
-  static const String ThirdItem = 'Third Item';
+  static const String FirstItem = 'Gênero 1';
+  static const String SecondItem = 'Gênero 2';
+  static const String ThirdItem = 'Gênero 3';
 
   static const List<String> choices = <String>[
     FirstItem,
