@@ -1,16 +1,25 @@
-# muviees
+# Muviees Flutter App
 
-A new Flutter project.
+Um simples aplicativo de informações de filmes que consome a API do  [The Movie DataBase](https://developers.themoviedb.org/)
 
-## Getting Started
+## Instalação
 
-This project is a starting point for a Flutter application.
+Para rodar o projeto localmente basa seguir o passo a passo:
 
-A few resources to get you started if this is your first Flutter project:
+- Abra o local onde deseja colocar o projeto, abra o terminal e clone através do Git digitando git 
+  ```sh
+   $ git clone https://github.com/Felipemartinsgoulart/muviees.git
+  ```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Dentro da pasta do projeto localize o arquivo `pubspec.yalm`, para instalar as dependências você pode salvar o arquivo ou digitar no terminal
+  ```flutter
+   flutter pub get
+  ```
+ 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Meta
+
+Felipe Martins Goulart – [LinkedIn](www.linkedin.com/in/felipemgoulart) – felipemartinsgoulart@gmail.com
+
+
+[https://github.com/Felipemartinsgoulart/](https://github.com/Felipemartinsgoulart/)
